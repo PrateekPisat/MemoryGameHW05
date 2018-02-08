@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Memory Game!</title>
+</head>
+<body>
+<h1>Memory Game</h1>
+<div class="row">
+	<div class="col">
+		<div class="container">
+			<div class="alert alert-success">
+				Instructions for the game:<br>
+				A correct guess will earn you 20 points<br>
+				After 16 tries(32 clicks), each correct guess will earn you 10 points.<br>
+				You can restart the game at any point. <br>
+				NOTE: After every wrong guess, the game will pause for 2 seconds. During this time no clicks will be recorded
+			</div>
+		</div>		
+		<div class="row">		
+			<div class="container" id="root">
+  				Loading...
+			</div>
+		</div>
+		
+	</div>
+</div>
+</body>
+</html>

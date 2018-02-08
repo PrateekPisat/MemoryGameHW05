@@ -1,0 +1,18 @@
+# os
+.DS_Store
+
+# ide
+.idea
+
+# npm
+node_modules
+npm-debug.log
+yarn.lock
+
+# example
+example/js/build.js
+example/css/default.css
+
+# coverage
+coverage
+.nyc_output
