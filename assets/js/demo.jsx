@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button } from 'reactstrap';
 import { container } from 'reactstrap';
+import { createStore } from 'redux';
 
 export default function run_demo(root, channel) {
   ReactDOM.render(<Demo channel={channel}/>, root);
@@ -10,7 +11,7 @@ export default function run_demo(root, channel) {
 class Demo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
 	board: [],
 	actual: ([]),
 	isEnabled: [],
@@ -29,8 +30,8 @@ class Demo extends React.Component {
         			.receive("ok", this.passToState.bind(this))
         			.receive("error", resp => { console.log("Unable to join", resp) });
   }
-	
- 
+
+
 handleClick(index)
 {
 		if(this.state.clickable)
@@ -42,7 +43,7 @@ passToState(gameState)
 {
 	if(!gameState.game.clickable)
 	{
-		setTimeout(() => 
+		setTimeout(() =>
 		{
 			var tempBoard = gameState.game.board
 			tempBoard[gameState.game.index1] = "?"
@@ -69,7 +70,7 @@ passToState(gameState)
    			})
 		}, 2000);
 	}
-	this.setState(gameState.game)		
+	this.setState(gameState.game)
 }
 
 getScore(gameState)
@@ -87,10 +88,10 @@ newGame()
 		<div className="container">
 			<div className="row">
 				<div className="col">
-					<div id="Playername">	
+					<div id="Playername">
 						Name={this.state.name}
 					</div>
-					<div id="score">	
+					<div id="score">
 						Score={this.getScore(this.state)}
 					</div>
 				</div>
@@ -100,21 +101,15 @@ newGame()
 					</div>
 				</div>
 				<div className="col">
-					<div className="row">					
+					<div className="row">
 						<button className="btn btn-info" name="Restart" onClick={() => this.newGame()} >New Game</button>
 					</div>
-					<div className="row">					
+					<div className="row">
 						<a href="http:\\prateekpisat.com"><button className="btn btn-info" name="Back to HomePage">Back</button></a>
 					</div>
 				</div>
-		      </div>	
-		 </div>		
+		      </div>
+		 </div>
     		);
 	}
 }
-
-
-
-
-
-

@@ -14,9 +14,12 @@
     "react": "^16.2.0",
     "react-delayed": "^0.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
     "react-timeout": "^1.0.1",
     "react-timer-mixin": "^0.13.3",
     "reactstrap": "^5.0.0-alpha.4",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
